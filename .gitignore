@@ -1,12 +1,108 @@
-*.class
+Piggy Bank Code 1
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+/*The Java program is adapted to the C++ program and should work the same way*/
+/*Originally this program was written in C++ and been create in Java*/
 
-# Package Files #
-*.jar
-*.war
-*.ear
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+public class PiggyBK {
+public final float getBalance()
+{
+return balance;
+}
+protected float balance;
+}
+public class PiggyBK {
+public PiggyBK()
+{
+balance = 0F;
+}
+public final float getBalance()
+{
+return balance;
+}
+public final void money_in(float amount)
+{
+balance += amount; // balance = balance+amount
+}
+public final void money_out(float amount)
+{
+if (balance > amount)
+{
+balance -= amount;
+}
+else
+{
+System.out.print("There is not enough money in account"); //If there no
+money in account
+System.out.print("\n");
+}
+}
+}
+
+
+
+Piggy Bank Code 2
+
+public class ClsPiggyBK {
+public static int Main()
+{
+ClsPiggyBK mypiggy = new ClsPiggyBK();
+ClsPiggyBK mypiggy2 = new ClsPiggyBK();
+int account;
+System.out.print("What account would you like to deposit 5 in (0 or 1)?");
+System.out.print("\n");
+int cin = account;
+switch (account)
+{
+case 0:
+mypiggy.money_in(5);
+case 1:
+mypiggy2.money_in(5);
+default:
+break;
+}
+mypiggy.money_in(0); mypiggy2.money_in(0);
+System.out.print("The balance in mypiggy, mypiggy2 is ");
+System.out.print(mypiggy.getBalance());
+System.out.print(",");
+System.out.print(mypiggy2.getBalance());
+System.out.print("\n");
+mypiggy.money_in(5);
+System.out.print("Depositing 5 to mypiggy gives ");
+System.out.print(mypiggy.getBalance());
+System.out.print("\n");
+mypiggy.money_out(3);
+System.out.print("Subtracting 3 to mypiggy gives ");
+System.out.print(mypiggy.getBalance());
+System.out.print("\n");
+System.out.print("Test for subtracting too much from mypiggy2");
+System.out.print("\n");
+mypiggy2.money_out(3);
+System.out.print("Subtracting 3 to mypiggy2 gives ");
+System.out.print(mypiggy2.getBalance());
+System.out.print("\n");
+}
+private void money_out(int i) {
+// TODO Auto-generated method stub
+}
+private char[] getBalance() {
+// TODO Auto-generated method stub
+return null;
+}
+private void money_in(int i) {
+// TODO Auto-generated method stub
+}
+public class clsPiggyBank
+{
+public final float getBalance()
+{
+return balance;
+}
+protected float balance;
+}
+{
+float getBalance ( ) const { return balance; }
+void money_in ( float );
+void money_out ( float );
+}
+}
